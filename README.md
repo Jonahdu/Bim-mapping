@@ -1,1 +1,1 @@
-# Bim-mapping
+# bim-mapping
