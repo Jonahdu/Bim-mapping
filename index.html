@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIM模型颜色映射查看器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="viewer3d"></div>
+        <div id="controls">
+            <h3>🏗️ BIM颜色映射控制</h3>
+            <div class="control-group">
+                <strong>颜色模式:</strong><br>
+                <button id="btnType">按构件类型</button>
+                <button id="btnStatus">按施工状态</button>
+            </div>
+            <div class="control-group">
+                <strong>施工状态模拟:</strong><br>
+                <select id="statusSelect">
+                    <option value="not_started">未开始</option>
+                    <option value="planned">已计划</option>
+                    <option value="in_progress">进行中</option>
+                    <option value="completed">已完成</option>
+                    <option value="delayed">延迟</option>
+                </select>
+                <button id="btnUpdateStatus">更新选中构件状态</button>
+            </div>
+            <div class="control-group">
+                <strong>视图控制:</strong><br>
+                <button id="btnReset">重置视图</button>
+                <button id="btnToggleAxes">切换坐标轴</button>
+            </div>
+            <div id="infoPanel">
+                点击模型查看详细信息
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入Three.js库 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- 引入GLTF加载器 -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    
+    <!-- 我们的应用代码 -->
+    <script src="app.js"></script>
+</body>
+</html>
